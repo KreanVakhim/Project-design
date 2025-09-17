@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppings", sans-serif;
+  left: 0;
+}
+head p {
+  margin-left: 40px ;
+}
+body {
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+main {
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo img {
+  width: 60px;
+  border-radius: 100%;
+}
+/* Fullscreen navbar */
+nav {
+    position: sticky;
+    z-index: 1000;
+    top: 0;              
+    width: 100%;          
+    height: 70px;         
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px white;
+    padding: 0 40px;     
+    box-sizing: border-box;
+}
+#active { 
+  color:#6f4e37 ;}
+
+
+/* Logo */
+nav .logo{
+  margin-top: 138px;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+nav .logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Center navbar links */
+.navbar {
+    flex: 1;              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Links styling */
+.navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6f4e37;
+    position: relative;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover color and underline */
+.navbar a:hover {
+    color: #d9a066;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(to right, #6f4e37, #d9a066);
+    transition: width 0.4s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Profile icon */
+nav .profile i {
+    font-size: 48px;
+    color: #6f4e37;
+    transition: color 0.3s ease;
+}
+nav .profile i:hover {
+    color: #d9a066;
+}
+
+
+/* Optional: make nav responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        gap: 25px;
+    }
+    nav .profile i {
+        font-size: 36px;
+    }
+}
+
+/* ================== Global Reset ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================== Navbar ================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo img {
+  width: 60px;
+}
+
+nav .navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav .navbar a:hover {
+  color: #c77d36;
+}
+
+nav .profile i {
+  font-size: 32px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav .profile i:hover {
+  color: #c77d36;
+}
+
+/* ================== Contact Section ================== */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fff, #f7efe7);
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #c77d36;
+  font-weight: 700;
+}
+
+.contact p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ================== Contact Container ================== */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-container img {
+  width: 420px;
+  height: 350px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ================== Contact Form ================== */
+.contact-form {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c77d36;
+  box-shadow: 0 0 6px rgba(199, 125, 54, 0.4);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #c77d36;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #a85f1f;
+}
+
+/* ================== Contact Info ================== */
+.contact-info {
+  flex: 1;
+  text-align: left;
+  padding: 25px;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #c77d36;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+}
+
+.contact-info i {
+  color: #c77d36;
+  margin-right: 8px;
+}
+
+/* ================== Social Icons ================== */
+.social-icons a {
+  display: inline-block;
+  margin: 8px;
+  font-size: 22px;
+  color: #444;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #c77d36;
+  transform: scale(1.1);
+}
+
+/* ================== Footer ================== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+  color: #ddd;
+}
+
+footer .icon ul,
+footer .right ul {
+  display: flex;
+  list-style: none;
+}
+
+footer .icon ul li,
+footer .right ul li {
+  margin: 0 10px;
+}
+
+footer .icon i {
+  font-size: 22px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+footer .icon i:hover {
+  color: #c77d36;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* footer */
+footer {
+  background: #432d1d;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+.icon li {
+  list-style-type: none;
+  font-size: 32px;
+  width: 60px;
+}
+.icon li i {
+  color: white;
+}
+.icon li i:hover {
+  color: rgb(216, 215, 215);
+}
+

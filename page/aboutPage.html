@@ -1,56 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/about.css">
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop - About</title>
+  <link rel="icon" href="../img/logo.png" type="image/x-icon">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="../style/about.css">
 </head>
 <body>
-    <nav>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
     <div class="logo">
-        <img src="../img/logo.png" alt="Logo" />
+      <img src="../img/logo.png" alt="Logo">
+      <h2>COFFEE SHOP</h2>
     </div>
+
     <div class="navbar">
         <a href="../index.html">Home</a>
-        <a href="./aboutPage.html">About</a>
+        <a href="./aboutPage.html" id="active">About</a>
         <a href="./servicePage.html">Service</a>
         <a href="./contactPage.html">Contact</a>
     </div>
-    <div class="profile">
-        <i class="bx bxs-user-circle"></i>
+
+    <div class="nav-icons">
+      <a href="#"><i class='bx bx-cart'></i><span class="badge">3</span></a>
+      <a href="#"><span class="material-symbols-outlined">notifications</span><span class="badge">5</span></a>
     </div>
-</nav>
-    <section class="section">
-        <h2>Our Story</h2>
-        <p>Founded in 2018, our coffee shop has been serving hand-roasted beans and warm smiles to the community. We believe coffee is more than a drink — it’s a way to connect people.</p>
-    </section>
+  </nav>
 
-    <section class="section">
-        <h2>Meet Our Team</h2>
-        <p>From expert baristas to friendly staff, our team ensures every cup is made with love.</p>
-    </section>
+  <!-- ===== HISTORY ===== -->
+  <section class="about-history">
+    <h2>Our History</h2>
+    <div class="about-content">
+      <img src="../img/about/pic 1.png" alt="History">
+      <p>
+        Coffee Cambodia was founded in 2018 with a mission to bring premium coffee to Phnom Penh.
+        Over the years, we have grown into a community of coffee lovers who appreciate quality and sustainability.
+      </p>
+    </div>
+  </section>
 
+  <!-- ===== COFFEE TYPES ===== -->
+  <section class="coffee-types">
+    <h2>Our Coffee Varieties</h2>
+    <div class="coffee-grid">
+      <div class="coffee-item">
+        <img src="../img/service/img1.jpg" alt="Espresso">
+        <h3>1. Espresso</h3>
+        <p>Strong, rich, concentrated coffee.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img2.png" alt="Americano">
+        <h3>2. Americano</h3>
+        <p>Espresso diluted with hot water.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img3.png" alt="Latte">
+        <h3>3. Latte</h3>
+        <p>Espresso with steamed milk.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img4.png" alt="Cappuccino">
+        <h3>4. Cappuccino</h3>
+        <p>Espresso with frothed milk and cocoa powder.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img5.png" alt="Mocha">
+        <h3>5. Mocha</h3>
+        <p>Chocolate-flavored coffee with espresso and milk.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img6.jpg" alt="Macchiato">
+        <h3>6. Macchiato</h3>
+        <p>Espresso marked with milk foam.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img7.png" alt="Flat White">
+        <h3>7. Flat White</h3>
+        <p>Similar to latte but with velvety microfoam milk.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img8.jpg" alt="Affogato">
+        <h3>8. Affogato</h3>
+        <p>Espresso poured over vanilla ice cream.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img9.jpg" alt="Irish Coffee">
+        <h3>9. Irish Coffee</h3>
+        <p>Hot coffee with whiskey, sugar, and cream.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img10.png" alt="Iced Coffee">
+        <h3>10. Iced Coffee</h3>
+        <p>Cold coffee served with ice and milk/syrup.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img11.jpg" alt="Turkish Coffee">
+        <h3>11. Turkish Coffee</h3>
+        <p>Finely ground coffee simmered in water and sugar.</p>
+      </div>
+      <div class="coffee-item">
+        <img src="../img/service/img12.png" alt="Cold Brew">
+        <h3>12. Cold Brew</h3>
+        <p>Slow brewed coffee in cold water for smooth flavor.</p>
+      </div>
+    </div>
+  </section>
 
-    <br>
-    <footer>
-        <div class="left">
-            <p> 2025 Coffee Cambodia</p>
-        </div>
-        <div class="icon">
-            <ul>
-                <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
-                <li><a href="#"><i class='bx bxl-telegram' ></i></a></li>
-                <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+  <!-- ===== COFFEE BENEFITS ===== -->
+  <section class="coffee-benefits">
+    <h2>Benefits of Coffee</h2>
+    <div class="benefit-content">
+      <img src="../img/about/coffee-benefit.jpg" alt="Benefits">
+      <ul>
+        <li>Boosts energy and mental alertness</li>
+        <li>Rich in antioxidants</li>
+        <li>Improves physical performance</li>
+        <li>Supports heart health</li>
+        <li>May lower risk of certain diseases</li>
+      </ul>
+    </div>
+  </section>
 
-            </ul>
-        </div>
-        <div class="right">
-            <ul>
-                <li>Privacy policy</li>
-            </ul>
-        </div>
-    </footer>
+  <!-- ===== SOURCES ===== -->
+  <section class="product-source">
+    <h2>Our Coffee Sources</h2>
+    <div class="about-content">
+      <img src="../img/about/source.jpg" alt="Sources">
+      <p>
+        We source our coffee beans from premium plantations across Cambodia and neighboring countries.
+        Each batch is carefully selected to ensure freshness, aroma, and sustainable farming practices.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PROMOTIONS ===== -->
+  <section class="promotions">
+    <h2>Current Promotions</h2>
+    <div class="about-content">
+      <img src="../img/about/pic 2.png" alt="Promotion">
+      <ul>
+        <li>Buy 1 Get 1 Free on all lattes every Monday</li>
+        <li>10% off for students with valid ID</li>
+        <li>Free coffee sample with online orders above $20</li>
+        <li>Seasonal specials: Pumpkin Spice Latte in October</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="left">
+      <p>© 2025 Coffee Cambodia</p>
+    </div>
+    <div class="icon">
+      <ul>
+        <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+        <li><a href="#"><i class='bx bxl-telegram'></i></a></li>
+        <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 </html>

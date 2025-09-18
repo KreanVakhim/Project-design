@@ -1,117 +1,261 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "poppings", sans-serif;
-  left: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
-head p {
-  margin-left: 40px ;
-}
+
 body {
-  left: 0;
-  padding: 0;
-  margin: 0;
   width: 100%;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
 }
-main {
-  background-image: url(../img/logo.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+
+/* ===== NAVBAR ===== */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   width: 60px;
-  border-radius: 100%;
-}
-/* Fullscreen navbar */
-nav {
-    position: sticky;
-    z-index: 1000;
-    top: 0;              
-    width: 100%;          
-    height: 70px;         
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px white;
-    padding: 0 40px;     
-    box-sizing: border-box;
-}
-#active { 
-  color:#6f4e37 ;}
-
-
-/* Logo */
-nav .logo{
-  margin-top: 138px;
-  margin-right: 10%;
-  margin-bottom: 10%;
-}
-nav .logo img {
-    width: 60px;
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-/* Center navbar links */
+.logo h2 {
+  margin-left: 10px;
+  color: #6f4e37;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .navbar {
-    flex: 1;              
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
-/* Links styling */
 .navbar a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #6f4e37;
-    position: relative;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6f4e37;
+  position: relative;
+  padding: 10px 0;
+  transition: color 0.3s ease;
 }
 
-/* Hover color and underline */
-.navbar a:hover {
-    color: #d9a066;
+.navbar a:hover,
+#active {
+  color: #d9a066;
 }
 
 .navbar a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    bottom: -4px;
-    left: 0;
-    background: linear-gradient(to right, #6f4e37, #d9a066);
-    transition: width 0.4s ease;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, #6f4e37, #d9a066);
+  transition: width 0.4s ease;
 }
 
 .navbar a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-/* Profile icon */
-nav .profile i {
-    font-size: 48px;
-    color: #6f4e37;
-    transition: color 0.3s ease;
+/* ===== NAV ICONS ===== */
+.nav-icons {
+  display: flex;
+  gap: 20px;
 }
-nav .profile i:hover {
-    color: #d9a066;
+
+.nav-icons a {
+  position: relative;
+  text-decoration: none;
+  color: #5d4037;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Badge number */
+.nav-icons .badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Profile round icon */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #6d4c41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  transition: background 0.3s ease;
+}
+
+.profile-icon:hover {
+  background: #8d6e63;
 }
 
 
-/* Optional: make nav responsive */
-@media screen and (max-width: 768px) {
-    .navbar {
-        gap: 25px;
-    }
-    nav .profile i {
-        font-size: 36px;
-    }
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
+
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: white;
+  height: 70px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+nav .logo h2 {
+  margin-left: 10px;
+  color: #6f4e37;
+  font-size: 24px;
+}
+
+.navbar a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #6f4e37;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar a#active, .navbar a:hover {
+  color: #d9a066;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+.nav-icons .badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+}
+
+/* ===== SECTION HEADINGS ===== */
+section h2 {
+  font-size: 28px;
+  color: #6f4e37;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== ABOUT CONTENT ===== */
+.about-content, .benefit-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+}
+.about-content img, .benefit-content img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.about-content p, .benefit-content ul {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===== COFFEE GRID ===== */
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+.coffee-item {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.coffee-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.coffee-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== BENEFITS & PROMOTIONS ===== */
+.coffee-benefits ul, .promotions ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.promotions ul {
+  margin-top: 10px;
+}
+
+
 
 /* footer */
  footer {

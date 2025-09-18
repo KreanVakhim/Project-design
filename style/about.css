@@ -206,7 +206,7 @@ section h2 {
   max-width: 1000px;
   margin: 0 auto 50px auto;
 }
-.about-content img, .benefit-content img {
+.about-content img, .benefit-content img, .promotions img {
   width: 300px;
   border-radius: 10px;
   object-fit: cover;
@@ -247,6 +247,8 @@ section h2 {
 
 /* ===== BENEFITS & PROMOTIONS ===== */
 .coffee-benefits ul, .promotions ul {
+  display: flex;
+  flex-direction: column;
   list-style: disc;
   padding-left: 20px;
   font-size: 16px;

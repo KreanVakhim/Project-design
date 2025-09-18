@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+//* ===== GLOBAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -130,12 +130,6 @@ nav {
 }
 
 
-body {
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
 /* ===== NAVBAR ===== */
 nav {
   display: flex;
@@ -150,134 +144,125 @@ nav {
   z-index: 1000;
 }
 
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 nav .logo img {
-  width: 60px;
+  width: 50px;
   border-radius: 50%;
 }
 nav .logo h2 {
-  margin-left: 10px;
   color: #6f4e37;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .navbar a {
-  margin: 0 20px;
+  margin: 0 15px;
   text-decoration: none;
   color: #6f4e37;
   font-weight: bold;
-  position: relative;
   transition: color 0.3s ease;
 }
 .navbar a#active, .navbar a:hover {
   color: #d9a066;
 }
 
-.nav-icons {
+/* ===== HERO ===== */
+.hero {
+  background: url("img/hero-bg.jpg") no-repeat center center/cover;
+  height: 90vh;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
   position: relative;
 }
-.nav-icons .badge {
+.hero::after {
+  content: "";
   position: absolute;
-  top: -6px;
-  right: -10px;
-  background: red;
-  color: white;
-  border-radius: 50%;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 2px 6px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
 }
-
-/* ===== SECTION HEADINGS ===== */
-section h2 {
-  font-size: 28px;
-  color: #6f4e37;
-  margin-bottom: 20px;
-  text-align: center;
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
-
-/* ===== ABOUT CONTENT ===== */
-.about-content, .benefit-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto 50px auto;
-}
-.about-content img, .benefit-content img {
-  width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-.about-content p, .benefit-content ul {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* ===== COFFEE GRID ===== */
-.coffee-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto 50px auto;
-}
-.coffee-item {
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.coffee-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.coffee-item img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+.hero h1 {
+  font-size: 48px;
   margin-bottom: 10px;
 }
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
-/* ===== BENEFITS & PROMOTIONS ===== */
-.coffee-benefits ul, .promotions ul {
-  list-style: disc;
-  padding-left: 20px;
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #6f4e37;
+  color: white;
+  border-radius: 25px;
   font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
-.promotions ul {
-  margin-top: 10px;
+.btn:hover {
+  background: #d9a066;
+  transform: scale(1.05);
 }
 
+/* animation pulse/move */
+.anim-btn {
+  animation: pulseMove 2s infinite;
+}
+@keyframes pulseMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
 
+/* ===== LEARN MORE SECTION ===== */
+.learn-more {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff5ec;
+  margin: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.learn-more h2 {
+  font-size: 28px;
+  color: #6f4e37;
+  margin-bottom: 15px;
+}
+.learn-more p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+  color: #444;
+}
 
-/* footer */
- footer {
-  background: #432d1d;
-  padding: 16px 40px;
+/* ===== FOOTER ===== */
+footer {
+  background: #6f4e37;
+  color: white;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
-  color: white;
+  padding: 20px 40px;
+  flex-wrap: wrap;
 }
- ul {
+footer ul {
   display: flex;
-  justify-content: space-between;
+  gap: 15px;
+  list-style: none;
 }
-.icon li {
-  list-style-type: none;
-  font-size: 32px;
-  width: 60px;
-}
-.icon li i {
+footer ul li a {
   color: white;
+  font-size: 24px;
 }
-.icon li i:hover {
-  color: rgb(216, 215, 215);
-} 

@@ -72,6 +72,7 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER ===== -->
   <footer>
     <div class="left"><p>© 2025 Coffee Cambodia</p></div>
     <div class="icon">
@@ -83,5 +84,27 @@
     </div>
     <div class="right"><ul><li>Privacy Policy</li></ul></div>
   </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    // toggle menu
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // close menu after clicking a link
+    const navItems = navLinks.querySelectorAll("a");
+    navItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+      });
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>

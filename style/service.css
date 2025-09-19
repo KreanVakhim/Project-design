@@ -338,15 +338,17 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  flex-wrap: wrap;
 }
+
 footer ul {
+  list-style: none;
   display: flex;
   gap: 15px;
-  list-style: none;
 }
+
 footer ul li a {
   color: white;
   font-size: 24px;
 }
+
 

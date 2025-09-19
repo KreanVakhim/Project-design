@@ -130,6 +130,43 @@ nav {
   background: #8d6e63;
 }
 
+/* ===== MENU ICON ===== */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #6f4e37;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-icons {
+    display: none; /* optional: hide icons on small screens */
+  }
+}
+
+
 /* ===== HERO SECTION ===== */
 .hero {
   height: 80vh;

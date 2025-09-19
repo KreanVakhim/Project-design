@@ -129,72 +129,29 @@ nav {
   background: #8d6e63;
 }
 
-
-/* Optional: make nav responsive */
-@media screen and (max-width: 768px) {
-    .navbar {
-        gap: 25px;
-    }
-    nav .profile i {
-        font-size: 36px;
-    }
-}
-
-/* ================== Global Reset ================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ================== Navbar ================== */
-nav {
+/* ================== Contact Section hero ================== */
+section.hero {
+  height: 80vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 12px 50px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("../img/contactPage/background.png") no-repeat center/cover;
+  color: #fff;
+  padding: 20px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-nav .logo img {
-  width: 60px;
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-nav .navbar a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav .navbar a:hover {
-  color: #c77d36;
-}
-
-nav .profile i {
-  font-size: 32px;
-  color: #444;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-nav .profile i:hover {
-  color: #c77d36;
-}
-
-/* ================== Contact Section ================== */
 .contact {
   text-align: center;
   padding: 60px 20px;
@@ -226,8 +183,8 @@ nav .profile i:hover {
 }
 
 .contact-container img {
-  width: 420px;
-  height: 350px;
+  width: 280px;
+  height: 360px;
   max-width: 100%;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -317,13 +274,12 @@ nav .profile i:hover {
 
 /* ================== Footer ================== */
 footer {
+  background: #432d1d;
+  padding: 16px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #222;
-  padding: 20px 50px;
-  flex-wrap: wrap;
-  color: #ddd;
+  justify-content: space-between;
+  color: white;
 }
 
 footer .icon ul,
@@ -332,19 +288,19 @@ footer .right ul {
   list-style: none;
 }
 
-footer .icon ul li,
-footer .right ul li {
+footer .icon li,
+footer .right li {
   margin: 0 10px;
 }
 
 footer .icon i {
   font-size: 22px;
-  color: #ddd;
+  color: #fff;
   transition: 0.3s;
 }
 
 footer .icon i:hover {
-  color: #c77d36;
+  color: rgb(216, 215, 215);
 }
 
 /* ================== Responsive ================== */
@@ -353,38 +309,7 @@ footer .icon i:hover {
     flex-direction: column;
     align-items: center;
   }
-
   .contact-info {
     text-align: center;
   }
 }
-
-
-
-
-
-/* footer */
-footer {
-  background: #432d1d;
-  padding: 16px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-}
-ul {
-  display: flex;
-  justify-content: space-between;
-}
-.icon li {
-  list-style-type: none;
-  font-size: 32px;
-  width: 60px;
-}
-.icon li i {
-  color: white;
-}
-.icon li i:hover {
-  color: rgb(216, 215, 215);
-}
-

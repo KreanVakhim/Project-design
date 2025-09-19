@@ -260,26 +260,22 @@ section h2 {
 
 
 /* footer */
- footer {
-  background: #432d1d;
-  padding: 16px 40px;
+footer {
+  background: #6f4e37;
+  color: white;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
-  color: white;
+  padding: 20px 40px;
 }
- ul {
+
+footer ul {
+  list-style: none;
   display: flex;
-  justify-content: space-between;
+  gap: 15px;
 }
-.icon li {
-  list-style-type: none;
-  font-size: 32px;
-  width: 60px;
-}
-.icon li i {
+
+footer ul li a {
   color: white;
+  font-size: 24px;
 }
-.icon li i:hover {
-  color: rgb(216, 215, 215);
-} 

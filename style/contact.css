@@ -13,30 +13,7 @@ body {
   color: #333;
 }
 
-/* ===== GLOBAL IMAGE STYLES - FULL VISIBILITY WITH SUBTLE ANIMATIONS ===== */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  filter: none !important;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Override any potential hiding styles */
-img[style*="display:none"],
-img[style*="visibility:hidden"],
-img[style*="opacity:0"] {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-/* ===== NAVBAR - SUBTLE ANIMATIONS ===== */
+/* ===== NAVBAR ===== */
 nav {
   position: sticky;
   top: 0;
@@ -54,27 +31,11 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.02);
 }
 
 .logo img {
   width: 60px;
-  height: 60px;
   border-radius: 50%;
-  object-fit: cover;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.05);
 }
 
 .logo h2 {
@@ -82,14 +43,9 @@ nav {
   color: #6f4e37;
   font-size: 24px;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-.logo h2:hover {
-  color: #d9a066;
-}
-
-/* ===== MOBILE MENU OVERLAY - SMOOTH SLIDE ANIMATION ===== */
+/* ===== MOBILE MENU OVERLAY ===== */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -98,7 +54,6 @@ nav {
   height: 100vh;
   background: linear-gradient(135deg, #6f4e37 0%, #d9a066 100%);
   z-index: 2000;
-  transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -135,22 +90,12 @@ nav {
   color: white;
   font-size: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.mobile-profile-pic:hover {
-  transform: scale(1.1);
 }
 
 .mobile-user-details h3 {
   color: white;
   font-size: 18px;
   margin-bottom: 2px;
-  transition: color 0.3s ease;
-}
-
-.mobile-user-details h3:hover {
-  color: #d9a066;
 }
 
 .mobile-user-details p {
@@ -166,12 +111,6 @@ nav {
   cursor: pointer;
   padding: 5px;
   border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.close-menu:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: rotate(90deg);
 }
 
 .mobile-menu-content {
@@ -197,24 +136,12 @@ nav {
   font-weight: 500;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
 .mobile-nav-item i {
   font-size: 22px;
   width: 25px;
   text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.mobile-nav-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(8px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.mobile-nav-item:hover i {
-  transform: scale(1.1);
 }
 
 .mobile-nav-item.active {
@@ -231,19 +158,9 @@ nav {
   width: 4px;
   background: #fff;
   border-radius: 0 2px 2px 0;
-  animation: slideIn 0.3s ease;
 }
 
-@keyframes slideIn {
-  from {
-    width: 0;
-  }
-  to {
-    width: 4px;
-  }
-}
-
-/* Mobile Icons Section - SUBTLE ANIMATIONS */
+/* Mobile Icons Section */
 .mobile-icons-section {
   margin: 30px 0;
   padding: 20px;
@@ -278,7 +195,6 @@ nav {
   position: relative;
   font-size: 14px;
   font-weight: 500;
-  transition: all 0.3s ease;
 }
 
 .mobile-icon-item i {
@@ -290,18 +206,6 @@ nav {
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.mobile-icon-item:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-}
-
-.mobile-icon-item:hover i {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.15);
 }
 
 .mobile-icon-item .badge {
@@ -316,14 +220,9 @@ nav {
   border-radius: 10px;
   min-width: 18px;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
-.mobile-icon-item:hover .badge {
-  transform: scale(1.1);
-}
-
-/* Mobile Bottom Links - SUBTLE ANIMATIONS */
+/* Mobile Bottom Links */
 .mobile-bottom-links {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
@@ -338,26 +237,14 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   font-size: 15px;
-  transition: all 0.3s ease;
 }
 
 .mobile-bottom-item i {
   font-size: 18px;
   width: 20px;
-  transition: transform 0.3s ease;
 }
 
-.mobile-bottom-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-  transform: translateX(8px);
-}
-
-.mobile-bottom-item:hover i {
-  transform: translateX(5px);
-}
-
-/* ===== DESKTOP NAVIGATION - SUBTLE ANIMATIONS ===== */
+/* ===== DESKTOP NAVIGATION ===== */
 .navbar-desktop {
   display: flex;
   gap: 50px;
@@ -372,7 +259,6 @@ nav {
   color: #6f4e37;
   position: relative;
   padding: 10px 0;
-  transition: color 0.3s ease;
 }
 
 .navbar-desktop a:hover,
@@ -388,7 +274,6 @@ nav {
   bottom: -4px;
   left: 0;
   background: linear-gradient(to right, #6f4e37, #d9a066);
-  transition: width 0.4s ease;
 }
 
 .navbar-desktop a:hover::after,
@@ -396,7 +281,7 @@ nav {
   width: 100%;
 }
 
-/* ===== DESKTOP NAV ICONS - SUBTLE ANIMATIONS ===== */
+/* ===== DESKTOP NAV ICONS ===== */
 .nav-icons-desktop {
   display: flex;
   gap: 20px;
@@ -411,7 +296,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
 }
 
 .nav-icons-desktop .material-symbols-outlined {
@@ -431,11 +315,6 @@ nav {
   border-radius: 50%;
   min-width: 20px;
   text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.nav-icons-desktop a:hover .badge {
-  transform: scale(1.2);
 }
 
 .profile-icon {
@@ -448,21 +327,13 @@ nav {
   justify-content: center;
   color: white;
   font-size: 22px;
-  transition: all 0.3s ease;
 }
 
 .profile-icon:hover {
   background: #8d6e63;
-  transform: scale(1.1);
 }
 
-.cart-icon:hover,
-.notification-icon:hover {
-  color: #d9a066;
-  transform: scale(1.15);
-}
-
-/* ===== MENU ICON (HAMBURGER) - SUBTLE ANIMATION ===== */
+/* ===== MENU ICON (HAMBURGER) ===== */
 .menu-icon {
   display: none;
   font-size: 30px;
@@ -470,24 +341,9 @@ nav {
   cursor: pointer;
   padding: 5px;
   border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
-.menu-icon:hover {
-  background: rgba(111, 78, 55, 0.1);
-  transform: scale(1.1);
-}
-
-.menu-icon.active i {
-  animation: menuRotate 0.3s ease;
-}
-
-@keyframes menuRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(90deg); }
-}
-
-/* ===== HERO SECTION - SUBTLE BACKGROUND ANIMATION ===== */
+/* ===== HERO SECTION ===== */
 .hero {
   height: 80vh;
   display: flex;
@@ -495,7 +351,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
               url("../img/contactPage/background.png") no-repeat center/cover;
   color: white;
   padding: 20px;
@@ -509,18 +365,8 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(111, 79, 55, 0.2), rgba(217, 160, 102, 0.1));
+  
   z-index: 1;
-  animation: gradientShift 8s ease-in-out infinite alternate;
-}
-
-@keyframes gradientShift {
-  0% {
-    background: linear-gradient(45deg, rgba(111, 79, 55, 0.2), rgba(217, 160, 102, 0.1));
-  }
-  100% {
-    background: linear-gradient(45deg, rgba(217, 160, 102, 0.1), rgba(111, 79, 55, 0.2));
-  }
 }
 
 .hero > * {
@@ -532,22 +378,12 @@ nav {
   font-size: 3.5rem;
   margin-bottom: 20px;
   font-weight: 700;
-  transition: transform 0.3s ease;
-}
-
-.hero h1:hover {
-  transform: scale(1.02);
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
   max-width: 600px;
-  transition: color 0.3s ease;
-}
-
-.hero p:hover {
-  color: #d9a066;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -573,26 +409,15 @@ nav {
   margin-bottom: 10px;
   color: #c77d36;
   font-weight: 700;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.contact h2:hover {
-  transform: scale(1.02);
 }
 
 .contact p {
   margin-bottom: 50px;
   font-size: 16px;
-  color: #555;
+  color: black;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  transition: color 0.3s ease;
-}
-
-.contact p:hover {
-  color: #c77d36;
 }
 
 /* ===== CONTACT CONTAINER ===== */
@@ -610,38 +435,21 @@ nav {
   gap: 30px;
 }
 
-/* ===== CONTACT IMAGE - SUBTLE HOVER ANIMATION ===== */
 .contact-image {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  filter: none !important;
-  transition: all 0.3s ease;
 }
 
-.contact-image:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-}
-
-/* ===== CONTACT INFO - SUBTLE ANIMATIONS ===== */
+/* ===== CONTACT INFO ===== */
 .contact-info {
   background: #fff;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.contact-info:hover {
-  transform: translateY(-5px);
 }
 
 .contact-info h3 {
@@ -650,11 +458,6 @@ nav {
   color: #c77d36;
   font-weight: 600;
   position: relative;
-  transition: color 0.3s ease;
-}
-
-.contact-info h3:hover {
-  color: #d9a066;
 }
 
 .contact-info h3::after {
@@ -666,11 +469,6 @@ nav {
   height: 3px;
   background: linear-gradient(90deg, #c77d36, #d9a066);
   border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.contact-info:hover h3::after {
-  width: 60px;
 }
 
 .contact-item {
@@ -687,7 +485,6 @@ nav {
 .contact-item:hover {
   background: rgba(199, 125, 54, 0.1);
   transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .contact-item i {
@@ -695,26 +492,16 @@ nav {
   color: #c77d36;
   width: 30px;
   text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.contact-item:hover i {
-  transform: scale(1.1);
 }
 
 .contact-item p {
   margin: 0;
   font-size: 15px;
-  color: #333;
+  color: black;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.contact-item:hover p {
-  color: #c77d36;
-}
-
-/* ===== SOCIAL ICONS - SUBTLE ANIMATIONS ===== */
+/* ===== SOCIAL ICONS ===== */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -733,31 +520,30 @@ nav {
   font-size: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(199, 125, 54, 0.2);
 }
 
 .social-link:hover {
-  background: linear-gradient(45deg, #d9a066, #c77d36);
   transform: translateY(-3px) scale(1.1);
   box-shadow: 0 8px 20px rgba(199, 125, 54, 0.3);
+  background: linear-gradient(45deg, #d9a066, #c77d36);
 }
 
-/* ===== CONTACT FORM - SUBTLE ANIMATIONS ===== */
+/* ===== CONTACT FORM ===== */
 .contact-form {
   background: #fff;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.contact-form:hover {
-  transform: translateY(-5px);
 }
 
 .form-group {
   position: relative;
   margin-bottom: 25px;
+}
+
+.contact-item p {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
 }
 
 .form-group input,
@@ -768,7 +554,7 @@ nav {
   border-radius: 12px;
   background: #faf9f7;
   font-size: 15px;
-  color: #333;
+  color: black;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -778,7 +564,6 @@ nav {
   border-color: #c77d36;
   background: #fff;
   box-shadow: 0 0 0 3px rgba(199, 125, 54, 0.1);
-  transform: scale(1.02);
 }
 
 .form-group label {
@@ -824,17 +609,12 @@ nav {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(199, 125, 54, 0.2);
 }
 
 .submit-btn:hover {
   background: linear-gradient(45deg, #d9a066, #c77d36);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(199, 125, 54, 0.3);
-}
-
-.submit-btn:active {
-  transform: translateY(-1px);
 }
 
 .submit-btn i {
@@ -846,7 +626,7 @@ nav {
   transform: translateX(5px);
 }
 
-/* ===== FOOTER - SUBTLE ICON ANIMATIONS ===== */
+/* ===== FOOTER ===== */
 footer {
   background: linear-gradient(135deg, #432d1d 0%, #5c3920 100%);
   padding: 20px 40px;
@@ -888,37 +668,27 @@ footer .icon a {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  padding: 5px;
-  border-radius: 50%;
 }
 
 footer .icon a:hover {
   color: #d9a066;
-  transform: translateY(-3px) scale(1.1);
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px) scale(1.1);
 }
 
 .left p {
   margin: 0;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
-  transition: color 0.3s ease;
-}
-
-.left p:hover {
-  color: #d9a066;
 }
 
 .right ul li {
   color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .right ul li:hover {
   color: #d9a066;
-  transform: translateX(5px);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1000,6 +770,8 @@ footer .icon a:hover {
 
   .contact-item {
     padding: 12px;
+    flex-direction: row; /* Ensure row layout on tablet */
+    align-items: center;
   }
 
   .social-icons {
@@ -1073,13 +845,9 @@ footer .icon a:hover {
     padding: 12px 20px;
     font-size: 15px;
   }
-
-  .contact-image {
-    height: 200px;
-  }
 }
 
-/* Smooth scrolling behavior - KEPT FOR USABILITY */
+/* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
 }

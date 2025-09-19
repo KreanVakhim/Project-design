@@ -3,69 +3,342 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Shop</title>
-  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <title>Coffee Shop - Learn More</title>
+  <link rel="icon" href="../img/logo.png" type="image/x-icon">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <link rel="stylesheet" href="../style/learnmore.css">
 </head>
 <body>
-    <nav>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
     <div class="logo">
       <img src="../img/logo.png" alt="Logo">
       <h2>COFFEE SHOP</h2>
     </div>
-    <div class="navbar">
-        <a href="../index.html" id="active">Home</a>
-        <a href="./aboutPage.html">About</a>
-        <a href="./servicePage.html">Service</a>
-        <a href="./contactPage.html">Contact</a>
+
+    <!-- Mobile Menu Icon -->
+    <div class="menu-icon" id="menu-toggle">
+      <i class='bx bx-menu'></i>
     </div>
-   <!-- nav icons -->
-    <div class="nav-icons">
-      <a href="#">
-        <i class='bx bx-cart'></i>
-        <span class="badge">3</span>
-      </a>
 
-      <a href="#">
-        <span class="material-symbols-outlined">notifications</span>
-        <span class="badge">5</span>
-      </a>
+    <!-- Desktop Navigation -->
+    <div class="navbar-desktop">
+      <a href="../index.html">Home</a>
+      <a href="./aboutPage.html">About</a>
+      <a href="./servicePage.html">Service</a>
+      <a href="./contactPage.html">Contact</a>
+      <a href="./learnmore.html" class="active">Learn More</a>
+    </div>
 
-      <!-- Profile Icon -->
-      <a href="#" class="profile-icon">
-        <i class='bx bxs-user'></i>
-      </a>
+    <!-- Desktop Icons -->
+    <div class="nav-icons-desktop">
+      <a href="#" class="cart-icon"><i class='bx bx-cart'></i><span class="badge">3</span></a>
+      <a href="#" class="notification-icon"><i class='bx bx-bell'></i><span class="badge">5</span></a>
+      <a href="#" class="profile-icon"><i class='bx bxs-user'></i></a>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="mobile-user-info">
+          <div class="mobile-profile-pic">
+            <i class='bx bxs-user'></i>
+          </div>
+          <div class="mobile-user-details">
+            <h3>Vakhim Krean</h3>
+            <p>Welcome back!</p>
+          </div>
+        </div>
+        <button class="close-menu" id="close-menu">
+          <i class='bx bx-x'></i>
+        </button>
+      </div>
+
+      <div class="mobile-menu-content">
+        <!-- Navigation Links -->
+        <div class="mobile-nav-links">
+          <a href="../index.html" class="mobile-nav-item">
+            <i class='bx bx-home-alt'></i>
+            <span>Home</span>
+          </a>
+          <a href="./aboutPage.html" class="mobile-nav-item">
+            <i class='bx bx-info-circle'></i>
+            <span>About</span>
+          </a>
+          <a href="./servicePage.html" class="mobile-nav-item">
+            <i class='bx bx-coffee'></i>
+            <span>Service</span>
+          </a>
+          <a href="./contactPage.html" class="mobile-nav-item">
+            <i class='bx bx-phone'></i>
+            <span>Contact</span>
+          </a>
+          <a href="./learnmore.html" class="mobile-nav-item active">
+            <i class='bx bx-book-open'></i>
+            <span>Learn More</span>
+          </a>
+        </div>
+
+        <!-- Mobile Icons Section -->
+        <div class="mobile-icons-section">
+          <h4>Quick Actions</h4>
+          <div class="mobile-icons-grid">
+            <a href="#" class="mobile-icon-item cart-icon-mobile">
+              <i class='bx bx-cart-alt'></i>
+              <span>Cart <span class="badge">3</span></span>
+            </a>
+            <a href="#" class="mobile-icon-item notification-icon-mobile">
+              <i class='bx bx-bell'></i>
+              <span>Notifications <span class="badge">5</span></span>
+            </a>
+            <a href="#" class="mobile-icon-item profile-icon-mobile">
+              <i class='bx bxs-user'></i>
+              <span>Profile</span>
+            </a>
+            <a href="#" class="mobile-icon-item settings-icon">
+              <i class='bx bx-cog'></i>
+              <span>Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Additional Links -->
+        <div class="mobile-bottom-links">
+          <a href="#" class="mobile-bottom-item">
+            <i class='bx bx-help-circle'></i>
+            <span>Help</span>
+          </a>
+          <a href="#" class="mobile-bottom-item">
+            <i class='bx bx-log-out'></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
 
-</nav>
-  <!-- ===== HERO ===== -->
+  <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to Coffee Cambodia</h1>
-      <p>Enjoy the finest coffee blends, brewed with love.</p>
-      <a href="#learn-more" class="btn anim-btn">Learn More</a>
+      <h1 class="fade-in">Learn More About Coffee</h1>
+      <p class="fade-in-delay">Discover the rich history, science, and artistry behind your favorite beverage</p>
+      <div class="hero-buttons fade-in-delay-2">
+        <a href="#history" class="btn btn-primary">Coffee History</a>
+        <a href="#brewing" class="btn btn-secondary">Brewing Methods</a>
+      </div>
     </div>
   </section>
 
-  <!-- ===== LEARN MORE SECTION ===== -->
-  <section id="learn-more" class="learn-more">
-    <h2>Why Choose Us?</h2>
-    <p>
-      At Coffee Cambodia, we don’t just serve coffee — we create experiences. 
-      From our carefully sourced beans to our welcoming spaces, every detail 
-      is designed for coffee lovers like you.
-    </p>
-    <a href="page/aboutPage.html" class="btn anim-btn">Explore More About Us</a>
+  <!-- ===== COFFEE HISTORY ===== -->
+  <section class="coffee-history" id="history">
+    <h2 class="slide-up">The Journey of Coffee</h2>
+    <div class="history-timeline">
+      <div class="timeline-item fade-in">
+        <div class="timeline-icon">
+          <i class='bx bx-coffee'></i>
+        </div>
+        <div class="timeline-content">
+          <h3>9th Century - Ethiopia</h3>
+          <p>Legend has it that a goat herder named Kaldi discovered coffee when his goats became particularly energetic after eating coffee cherries.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in">
+        <div class="timeline-icon">
+          <i class='bx bx-world'></i>
+        </div>
+        <div class="timeline-content">
+          <h3>15th Century - Yemen</h3>
+          <p>Sufi monks began cultivating coffee and using it to stay awake during long nights of prayer, spreading its use across the Arabian Peninsula.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in">
+        <div class="timeline-icon">
+          <i class='bx bx-ship'></i>
+        </div>
+        <div class="timeline-content">
+          <h3>17th Century - Europe</h3>
+          <p>Coffee reaches Europe through Venetian traders, leading to the establishment of the first coffee houses that became centers of intellectual discussion.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in">
+        <div class="timeline-icon">
+          <i class='bx bx-leaf'></i>
+        </div>
+        <div class="timeline-content">
+          <h3>19th Century - Americas</h3>
+          <p>Coffee cultivation spreads to the Americas, with Brazil becoming the world's largest producer, shaping global coffee culture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COFFEE SCIENCE ===== -->
+  <section class="coffee-science">
+    <h2 class="slide-up">The Science of Coffee</h2>
+    <div class="science-grid">
+      <div class="science-card fade-in">
+        <div class="science-icon">
+          <i class='bx bx-flask'></i>
+        </div>
+        <h3>Chemistry</h3>
+        <p>Coffee contains over 1,000 chemical compounds, including caffeine, chlorogenic acids, and various antioxidants that contribute to its complex flavor profile.</p>
+      </div>
+      
+      <div class="science-card fade-in">
+        <div class="science-icon">
+          <i class='bx bx-leaf'></i>
+        </div>
+        <h3>Bean Varieties</h3>
+        <p>Two main species: Arabica (70% of world production) offers smoother, sweeter flavors; Robusta provides stronger, more bitter taste with higher caffeine content.</p>
+      </div>
+      
+      <div class="science-card fade-in">
+        <div class="science-icon">
+          <i class='bx bx-thermometer'></i>
+        </div>
+        <h3>Roasting</h3>
+        <p>Temperature and time control the roast level - light, medium, or dark - each affecting flavor, acidity, and body through complex chemical reactions like the Maillard reaction.</p>
+      </div>
+      
+      <div class="science-card fade-in">
+        <div class="science-icon">
+          <i class='bx bx-water'></i>
+        </div>
+        <h3>Brewing</h3>
+        <p>Extraction chemistry determines flavor balance. Optimal extraction (18-22%) yields balanced acidity, sweetness, and bitterness through proper temperature and time control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BREWING METHODS ===== -->
+  <section class="brewing-methods" id="brewing">
+    <h2 class="slide-up">Brewing Methods</h2>
+    <div class="methods-container">
+      <div class="method-card fade-in">
+        <img src="../img/service/img1.jpg" alt="Espresso">
+        <div class="method-info">
+          <h3>Espresso</h3>
+          <p>High-pressure extraction (9 bars) through finely ground coffee produces concentrated shot with rich crema in 25-30 seconds.</p>
+          <div class="method-stats">
+            <span><i class='bx bx-time'></i> 25-30s</span>
+            <span><i class='bx bx-droplet'></i> 1oz</span>
+            <span><i class='bx bx-hot'></i> 195°F</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="method-card fade-in">
+        <img src="../img/service/img3.png" alt="French Press">
+        <div class="method-info">
+          <h3>French Press</h3>
+          <p>Full immersion brewing with coarse grind and metal filter allows natural oils to remain, creating full-bodied cup.</p>
+          <div class="method-stats">
+            <span><i class='bx bx-time'></i> 4min</span>
+            <span><i class='bx bx-droplet'></i> 8oz</span>
+            <span><i class='bx bx-hot'></i> 205°F</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="method-card fade-in">
+        <img src="../img/service/img12.png" alt="Pour Over">
+        <div class="method-info">
+          <h3>Pour Over</h3>
+          <p>Manual control of water flow through medium grind allows precise extraction, highlighting coffee's natural flavors.</p>
+          <div class="method-stats">
+            <span><i class='bx bx-time'></i> 3min</span>
+            <span><i class='bx bx-droplet'></i> 12oz</span>
+            <span><i class='bx bx-hot'></i> 195°F</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="method-card fade-in">
+        <img src="../img/service/img8.jpg" alt="Cold Brew">
+        <div class="method-info">
+          <h3>Cold Brew</h3>
+          <p>Slow extraction over 12-24 hours in cold water reduces acidity and bitterness, creating smooth, concentrated coffee.</p>
+          <div class="method-stats">
+            <span><i class='bx bx-time'></i> 18hrs</span>
+            <span><i class='bx bx-droplet'></i> 16oz</span>
+            <span><i class='bx bx-cool'></i> 32°F</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COFFEE CULTURE ===== -->
+  <section class="coffee-culture">
+    <h2 class="slide-up">Coffee Culture Around the World</h2>
+    <div class="culture-grid">
+      <div class="culture-card fade-in">
+        <img src="../img/service/img11.jpg" alt="Turkish Coffee">
+        <div class="culture-overlay">
+          <h3>Turkey</h3>
+          <p>Thick, strong coffee boiled in a cezve, served unfiltered with grounds that form patterns for fortune telling.</p>
+        </div>
+      </div>
+      
+      <div class="culture-card fade-in">
+        <img src="../img/service/img10.png" alt="Vietnamese Coffee">
+        <div class="culture-overlay">
+          <h3>Vietnam</h3>
+          <p>Strong drip coffee served over sweetened condensed milk, reflecting French colonial influence and local sweetness.</p>
+        </div>
+      </div>
+      
+      <div class="culture-card fade-in">
+        <img src="../img/service/img7.png" alt="Italian Espresso">
+        <div class="culture-overlay">
+          <h3>Italy</h3>
+          <p>Quick standing espresso shots at the bar, integral to daily social rituals and conversation starters.</p>
+        </div>
+      </div>
+      
+      <div class="culture-card fade-in">
+        <img src="../img/service/img9.jpg" alt="Ethiopian Ceremony">
+        <div class="culture-overlay">
+          <h3>Ethiopia</h3>
+          <p>Three rounds of progressively weaker coffee served during elaborate ceremonies that strengthen community bonds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUSTAINABILITY ===== -->
+  <section class="sustainability">
+    <h2 class="slide-up">Our Sustainability Commitment</h2>
+    <div class="sustainability-content">
+      <div class="sustainability-text fade-in">
+        <h3>Responsible Sourcing</h3>
+        <p>We partner directly with coffee farmers in Cambodia and neighboring regions, ensuring fair wages and sustainable farming practices that preserve the land for future generations.</p>
+        
+        <h3>Eco-Friendly Practices</h3>
+        <ul>
+          <li>Biodegradable packaging and compostable cups</li>
+          <li>Energy-efficient roasting equipment</li>
+          <li>Water conservation in processing</li>
+          <li>Zero-waste coffee grounds for composting</li>
+        </ul>
+        
+        <h3>Community Impact</h3>
+        <p>Supporting local education, women's cooperatives, and environmental conservation projects that benefit the communities where our coffee is grown.</p>
+      </div>
+      <div class="sustainability-visual fade-in">
+        <img src="../img/about/pic 4.png" alt="Sustainability">
+      </div>
+    </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="left">
-      <p>© 2025 Coffee Cambodia</p>
-    </div>
+    <div class="left"><p>© 2025 Coffee Cambodia</p></div>
     <div class="icon">
       <ul>
         <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
@@ -73,7 +346,148 @@
         <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
       </ul>
     </div>
+    <div class="right"><ul><li>Privacy Policy</li></ul></div>
   </footer>
+
+  <!-- JS for menu toggle and animations -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.getElementById("close-menu");
+
+    // Toggle mobile menu
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    // Close mobile menu
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    // Handle mobile navigation item clicks
+    document.querySelectorAll('.mobile-nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.mobile-nav-item').forEach(navItem => {
+          navItem.classList.remove('active');
+        });
+        item.classList.add('active');
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      });
+    });
+
+    // Animate menu items on load
+    window.addEventListener('load', () => {
+      const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+      mobileNavItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+        item.classList.add('animate-in');
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.slide-up, .fade-in, .fade-in-delay, .fade-in-delay-2, .timeline-item, .science-card, .method-card, .culture-card').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Staggered animations
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item, index) => {
+      item.style.transitionDelay = `${index * 0.2}s`;
+    });
+
+    const scienceCards = document.querySelectorAll('.science-card');
+    scienceCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    const methodCards = document.querySelectorAll('.method-card');
+    methodCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    const cultureCards = document.querySelectorAll('.culture-card');
+    cultureCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Interactive timeline
+    const timelineItemsInteractive = document.querySelectorAll('.timeline-item');
+    timelineItemsInteractive.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.transform = 'scale(1.02)';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = 'scale(1)';
+      });
+    });
+
+    // Culture card hover effects
+    const cultureCardsInteractive = document.querySelectorAll('.culture-card');
+    cultureCardsInteractive.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const overlay = card.querySelector('.culture-overlay');
+        overlay.style.opacity = '1';
+        overlay.style.transform = 'translateY(0)';
+      });
+      card.addEventListener('mouseleave', () => {
+        const overlay = card.querySelector('.culture-overlay');
+        overlay.style.opacity = '0';
+        overlay.style.transform = 'translateY(20px)';
+      });
+    });
+
+    // Method card hover effects
+    const methodCardsInteractive = document.querySelectorAll('.method-card img');
+    methodCardsInteractive.forEach(img => {
+      img.addEventListener('mouseenter', () => {
+        img.style.transform = 'scale(1.05)';
+      });
+      img.addEventListener('mouseleave', () => {
+        img.style.transform = 'scale(1)';
+      });
+    });
+  </script>
 
 </body>
 </html>

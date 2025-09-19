@@ -4,64 +4,136 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Shop</title>
-  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <link rel="icon" href="../img/logo.png" type="image/x-icon">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../style/main.css">
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
- <!-- ===== NAVBAR ===== -->
-<nav>
-  <div class="logo">
-    <img src="img/logo.png" alt="Logo">
-    <h2>COFFEE SHOP</h2>
-  </div>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="../img/logo.png" alt="Logo">
+      <h2>COFFEE SHOP</h2>
+    </div>
 
-  <!-- MENU ICON (for mobile) -->
-  <div class="menu-icon" id="menu-toggle">
-    <i class='bx bx-menu'></i>
-  </div>
+    <!-- Mobile Menu Icon -->
+    <div class="menu-icon" id="menu-toggle">
+      <i class='bx bx-menu'></i>
+    </div>
 
-  <div class="navbar" id="nav-links">
-    <a href="index.html" class="active">Home</a>
-    <a href="page/aboutPage.html">About</a>
-    <a href="page/servicePage.html">Service</a>
-    <a href="page/contactPage.html">Contact</a>
-  </div>
+    <!-- Desktop Navigation -->
+    <div class="navbar" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="page/aboutPage.html">About</a>
+      <a href="page/servicePage.html">Service</a>
+      <a href="page/contactPage.html">Contact</a>
+    </div>
 
-  <div class="nav-icons">
-    <a href="#"><i class='bx bx-cart'></i><span class="badge">3</span></a>
-    <a href="#"><i class='bx bx-bell'></i><span class="badge">5</span></a>
-    <a href="#" class="profile-icon"><i class='bx bxs-user'></i></a>
-  </div>
-</nav>
+    <!-- Desktop Icons -->
+    <div class="nav-icons-desktop">
+      <a href="#" class="cart-icon"><i class='bx bx-cart'></i><span class="badge">3</span></a>
+      <a href="#" class="notification-icon"><i class='bx bx-bell'></i><span class="badge">5</span></a>
+      <a href="#" class="profile-icon"><i class='bx bxs-user'></i></a>
+    </div>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="mobile-user-info">
+          <div class="mobile-profile-pic">
+            <i class='bx bxs-user'></i>
+          </div>
+          <div class="mobile-user-details">
+            <h3>Vakhim Krean</h3>
+            <p>Welcome back!</p>
+          </div>
+        </div>
+        <button class="close-menu" id="close-menu">
+          <i class='bx bx-x'></i>
+        </button>
+      </div>
 
-  <!-- ===== HERO ===== -->
+      <div class="mobile-menu-content">
+        <!-- Navigation Links -->
+        <div class="mobile-nav-links">
+          <a href="index.html" class="mobile-nav-item active">
+            <i class='bx bx-home-alt'></i>
+            <span>Home</span>
+          </a>
+          <a href="page/aboutPage.html" class="mobile-nav-item">
+            <i class='bx bx-info-circle'></i>
+            <span>About</span>
+          </a>
+          <a href="page/servicePage.html" class="mobile-nav-item">
+            <i class='bx bx-coffee'></i>
+            <span>Service</span>
+          </a>
+          <a href="page/contactPage.html" class="mobile-nav-item">
+            <i class='bx bx-phone'></i>
+            <span>Contact</span>
+          </a>
+        </div>
+
+        <!-- Mobile Icons Section -->
+        <div class="mobile-icons-section">
+          <h4>Quick Actions</h4>
+          <div class="mobile-icons-grid">
+            <a href="#" class="mobile-icon-item cart-icon-mobile">
+              <i class='bx bx-cart-alt'></i>
+              <span>Cart <span class="badge">3</span></span>
+            </a>
+            <a href="#" class="mobile-icon-item notification-icon-mobile">
+              <i class='bx bx-bell'></i>
+              <span>Notifications <span class="badge">5</span></span>
+            </a>
+            <a href="#" class="mobile-icon-item profile-icon-mobile">
+              <i class='bx bxs-user'></i>
+              <span>Profile</span>
+            </a>
+            <a href="#" class="mobile-icon-item settings-icon">
+              <i class='bx bx-cog'></i>
+              <span>Settings</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Additional Links -->
+        <div class="mobile-bottom-links">
+          <a href="#" class="mobile-bottom-item">
+            <i class='bx bx-help-circle'></i>
+            <span>Help</span>
+          </a>
+          <a href="#" class="mobile-bottom-item">
+            <i class='bx bx-log-out'></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
   <section class="hero">
     <h1>Welcome to My Coffee Website</h1>
     <p>From our shop to your cup, experience the best coffee.</p>
     <a href="./page/learnmore.html" class="btn">Learn More</a>
   </section>
 
-  <!-- ===== GALLERY ===== -->
+  <!-- GALLERY -->
   <div class="cta"><h2>Our Gallery</h2></div>
   <section class="gallery">
     <div class="gallery-grid">
-      <img src="./img/home/img4.png" alt="Gallery 1">
-      <img src="./img/home/img5.png" alt="Gallery 2">
-      <img src="./img/home/img2.png" alt="Gallery 3">
-      <img src="./img/home/img7.png" alt="Gallery 4">
+      <img src="../img/home/img4.png" alt="Gallery 1">
+      <img src="../img/home/img5.png" alt="Gallery 2">
+      <img src="../img/home/img2.png" alt="Gallery 3">
+      <img src="../img/home/img7.png" alt="Gallery 4">
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <div class="cta"><h2>Ready to Get Started?</h2></div>
-
-  <!-- ===== PROFILE CARD ===== -->
+  <!-- PROFILE CARD -->
   <section class="profile-card">
     <div class="image-container">
-      <img src="./img/home/cover.png" alt="Profile" class="image">
+      <img src="../img/home/cover.png" alt="Profile" class="image">
     </div>
     <div class="info">
       <h2>Vakhim Krean</h2>
@@ -71,8 +143,7 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-    <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <div class="left"><p>© 2025 Coffee Cambodia</p></div>
     <div class="icon">
@@ -85,26 +156,55 @@
     <div class="right"><ul><li>Privacy Policy</li></ul></div>
   </footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
+  <!-- JS Menu Toggle -->
   <script>
     const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.getElementById("close-menu");
 
-    // toggle menu
+    // Toggle mobile menu
     menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
+      mobileMenu.classList.add("active");
+      document.body.style.overflow = "hidden"; // Prevent background scroll
     });
 
-    // close menu after clicking a link
-    const navItems = navLinks.querySelectorAll("a");
-    navItems.forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
+    // Close mobile menu
+    closeMenu.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    // Handle mobile navigation item clicks
+    document.querySelectorAll('.mobile-nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        document.querySelectorAll('.mobile-nav-item').forEach(navItem => {
+          navItem.classList.remove('active');
+        });
+        // Add active class to clicked item
+        item.classList.add('active');
+        // Close menu after selection
+        mobileMenu.classList.remove("active");
+        document.body.style.overflow = "auto";
+      });
+    });
+
+    // Animate menu items on load
+    window.addEventListener('load', () => {
+      const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+      mobileNavItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+        item.classList.add('animate-in');
       });
     });
   </script>
-</body>
-</html>
-
 </body>
 </html>

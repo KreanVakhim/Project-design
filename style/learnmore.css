@@ -84,7 +84,8 @@ nav {
   color: #5d4037;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-.nav-icons a:hover {
+.nav-icons a:hover,
+.nav-icons a:focus {
   color: #d9a066;
   transform: scale(1.2);
 }
@@ -137,13 +138,9 @@ nav {
 .hero h1 {
   font-size: 40px;
   margin-bottom: 15px;
-  animation: fadeIn 1s ease forwards;
 }
 .hero p {
   font-size: 18px;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.5s;
 }
 .hero-buttons {
   margin-top: 20px;
@@ -177,8 +174,6 @@ section h2 {
   font-size: 32px;
   color: #6f4e37;
   margin-bottom: 40px;
-  opacity: 0;
-  animation: slideUp 0.8s forwards;
 }
 
 /* ===== HISTORY TIMELINE ===== */
@@ -193,6 +188,7 @@ section h2 {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 .timeline-icon {
   font-size: 40px;
@@ -215,6 +211,7 @@ section h2 {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 .science-icon {
   font-size: 40px;
@@ -236,8 +233,9 @@ section h2 {
 }
 .method-card img {
   width: 100%;
-  height: 180px;
+  height: 240px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 .method-info {
   padding: 15px;
@@ -267,9 +265,9 @@ section h2 {
 }
 .culture-card img {
   width: 100%;
-  height: 200px;
+  height: 240px;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 .culture-overlay {
   position: absolute;
@@ -279,7 +277,7 @@ section h2 {
   width: 100%;
   padding: 15px;
   transform: translateY(100%);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 .culture-card:hover img {
   transform: scale(1.1);
@@ -336,18 +334,9 @@ footer ul li a:hover {
   transform: translateY(20px);
   animation: fadeIn 0.8s forwards;
 }
-.fade-in-delay {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s forwards;
-  animation-delay: 0.5s;
-}
-.fade-in-delay-2 {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s forwards;
-  animation-delay: 0.8s;
-}
+.fade-in.delay-1 { animation-delay: 0.5s; }
+.fade-in.delay-2 { animation-delay: 0.8s; }
+
 @keyframes fadeIn {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -375,7 +364,7 @@ footer ul li a:hover {
     display: none;
   }
   .navbar.show {
-    display: flex !important;
+    display: flex;
   }
   .menu-icon {
     display: block;

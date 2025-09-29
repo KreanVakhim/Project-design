@@ -305,11 +305,14 @@ nav {
   font-weight: 500;
 }
 
+
 /* ===== SOCIAL ICONS ===== */
 .social-icons {
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-link {
@@ -331,34 +334,31 @@ nav {
   box-shadow: 0 8px 20px rgba(199, 125, 54, 0.3);
   background: linear-gradient(45deg, #d9a066, #c77d36);
 }
-
 /* ===== CONTACT FORM ===== */
 .contact-form {
   background: #fff;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .form-group {
   position: relative;
-  margin-bottom: 25px;
-}
-
-.contact-item p {
-  font-size: 15px;
-  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 15px 0 15px 15px;
-  border: 2px solid #eee;
+  padding: 14px 16px;
+  border: 2px solid #e0d7d1;
   border-radius: 12px;
-  background: #faf9f7;
+  background: #faf8f6;
   font-size: 15px;
-  color: black;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -367,67 +367,59 @@ nav {
 .form-group textarea:focus {
   border-color: #c77d36;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(199, 125, 54, 0.1);
+  box-shadow: 0 0 8px rgba(199, 125, 54, 0.2);
 }
 
 .form-group label {
   position: absolute;
-  left: 15px;
-  top: 15px;
-  color: #999;
-  font-size: 15px;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #888;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease all;
 }
 
-.form-group.focused label,
-.form-group.filled label {
-  top: -8px;
-  left: 10px;
+/* Floating label effect */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 12px;
   font-size: 12px;
   color: #c77d36;
   background: #fff;
   padding: 0 5px;
+  border-radius: 4px;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-  padding-top: 15px;
-}
-
+/* Submit Button */
 .submit-btn {
-  width: 100%;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 12px;
   background: linear-gradient(45deg, #c77d36, #d9a066);
-  color: #fff;
+  color: white;
+  border: none;
+  padding: 14px 22px;
   font-size: 16px;
   font-weight: 600;
+  border-radius: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  position: relative;
-  overflow: hidden;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
   background: linear-gradient(45deg, #d9a066, #c77d36);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(199, 125, 54, 0.3);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(199, 125, 54, 0.3);
 }
 
 .submit-btn i {
   font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.submit-btn:hover i {
-  transform: translateX(5px);
 }
 
 /* ===== FOOTER ===== */

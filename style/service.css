@@ -99,7 +99,6 @@ nav {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Bounce + Color Change */
 .nav-icons a:hover {
   color: #d9a066;
   animation: iconBounce 0.5s ease;
@@ -208,12 +207,11 @@ nav {
 
 .service-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 .service-card {
-  object-fit: cover;
   background: white;
   border-radius: 12px;
   padding: 20px;
@@ -222,7 +220,7 @@ nav {
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
@@ -235,7 +233,6 @@ nav {
 }
 
 .service-card h3 {
-  
   color: #6f4e37;
   margin-bottom: 10px;
 }
@@ -275,10 +272,6 @@ nav {
 .order-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 12px rgba(111, 78, 55, 0.6);
-}
-.service-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* ===== FEATURES ===== */
@@ -369,16 +362,6 @@ footer ul li a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes bounceBtn {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar {
@@ -395,7 +378,7 @@ footer ul li a:hover {
   }
 
   .navbar.show {
-    display: flex !important;
+    display: flex;
   }
 
   .menu-icon {

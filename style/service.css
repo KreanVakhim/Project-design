@@ -166,6 +166,36 @@ nav {
   margin-bottom: 20px;
   animation: fadeIn 1s ease forwards;
 }
+section h2 {
+  font-size: 2.5rem;
+  color: #6f4e37;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+section h2:hover {
+  transform: scale(1.02);
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #6f4e37, #d9a066);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+section h2:hover::after {
+  width: 100px;
+}
 
 .hero p {
   font-size: 18px;
@@ -207,7 +237,7 @@ nav {
 
 .service-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 

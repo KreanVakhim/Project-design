@@ -156,6 +156,38 @@ nav {
   box-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
 
+section h2 {
+  font-size: 2.5rem;
+  color: #6f4e37;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+section h2:hover {
+  transform: scale(1.02);
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #6f4e37, #d9a066);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+section h2:hover::after {
+  width: 100px;
+}
+
+
 /* ===== SECTIONS GENERAL ===== */
 section {
   padding: 60px 20px;

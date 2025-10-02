@@ -458,14 +458,15 @@ footer ul li a:hover {
 }
 
 /* ===== ANIMATIONS ===== */
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image {
+    height: 250px;
   }
 }
-
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar {
     position: absolute;
@@ -481,7 +482,7 @@ footer ul li a:hover {
   }
 
   .navbar.show {
-    display: flex !important;
+    display: flex;
   }
 
   .menu-icon {
@@ -492,5 +493,3 @@ footer ul li a:hover {
     display: none;
   }
 }
-
-

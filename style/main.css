@@ -252,7 +252,7 @@ nav {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  padding: 10px;
+  padding: 6px; /* smaller border size */
   background: #fff;
   overflow: hidden;
   z-index: 0;
@@ -261,7 +261,7 @@ nav {
 .image-container::before {
   content: '';
   position: absolute;
-  inset: -5px;
+  inset: -3px; /* thinner gradient ring */
   background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
   border-radius: 50%;
   animation: rotate 3s linear infinite;
@@ -273,7 +273,7 @@ nav {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 4px solid #fff; /* thinner white border */
 }
 
 @keyframes rotate {
@@ -305,6 +305,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 15px;
   padding: 20px 40px;
 
   /* Animation on load */
@@ -317,6 +319,7 @@ footer ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 footer ul li a {
@@ -357,7 +360,7 @@ footer ul li a:hover {
   }
 
   .navbar.show {
-    display: flex !important;
+    display: flex;
   }
 
   .menu-icon {
@@ -366,5 +369,27 @@ footer ul li a:hover {
 
   .nav-icons {
     display: none;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .profile-card {
+    width: 90%;
+  }
+
+  .image-container {
+    width: 150px;
+    height: 150px;
+    padding: 4px; /* smaller for mobile */
+  }
+
+  .image {
+    border: 3px solid #fff;
   }
 }

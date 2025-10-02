@@ -139,7 +139,11 @@ nav {
 .hero h1 { font-size: 40px; margin-bottom: 15px; }
 .hero p { font-size: 18px; }
 
-.hero-buttons { margin-top: 20px; }
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
 .hero .btn {
   text-decoration: none;
   padding: 12px 28px;
@@ -156,6 +160,10 @@ nav {
   box-shadow: 0 0 12px rgba(255,255,255,0.6);
 }
 
+/* ===== SECTIONS GENERAL ===== */
+section {
+  padding: 60px 20px;
+}
 section h2 {
   font-size: 2.5rem;
   color: #6f4e37;
@@ -165,11 +173,7 @@ section h2 {
   position: relative;
   transition: transform 0.3s ease;
 }
-
-section h2:hover {
-  transform: scale(1.02);
-}
-
+section h2:hover { transform: scale(1.02); }
 section h2::after {
   content: '';
   position: absolute;
@@ -182,22 +186,7 @@ section h2::after {
   border-radius: 2px;
   transition: width 0.3s ease;
 }
-
-section h2:hover::after {
-  width: 100px;
-}
-
-
-/* ===== SECTIONS GENERAL ===== */
-section {
-  padding: 60px 20px;
-}
-section h2 {
-  text-align: center;
-  font-size: 32px;
-  color: #6f4e37;
-  margin-bottom: 40px;
-}
+section h2:hover::after { width: 100px; }
 
 /* ===== CARDS (reuse hover) ===== */
 .card-hover {
@@ -240,6 +229,7 @@ section h2 {
   padding: 20px;
   border-radius: 12px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 .science-card:hover { transform: scale(1.05); }
 .science-icon {
@@ -380,16 +370,37 @@ footer ul li a:hover {
     padding: 20px 0;
     display: none;
   }
-  .navbar.show {
-    display: flex;
-  }
-  .menu-icon {
-    display: block;
-  }
-  .nav-icons {
-    display: none;
-  }
-  .sustainability-content {
+  .navbar.show { display: flex; }
+  .menu-icon { display: block; }
+  .nav-icons { display: none; }
+  .sustainability-content { flex-direction: column; }
+
+  /* Hero buttons responsive */
+  .hero-buttons {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-buttons .btn {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap; /* allow icons wrap */
+  }
+
+  footer .left,
+  footer .right {
+    font-size: 0.9rem;
   }
 }

@@ -495,3 +495,21 @@ footer ul li a:hover {
     border: 3px solid #fff;
   }
 }
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  footer ul {
+    justify-content: center;
+    flex-wrap: wrap; /* allow icons wrap */
+  }
+
+  footer .left,
+  footer .right {
+    font-size: 0.9rem;
+  }
+}

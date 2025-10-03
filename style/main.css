@@ -302,9 +302,13 @@ nav {
 .cta h2:hover::after {
   width: 100px;
 }
+/* ===== VIDEO SECTION ===== */
+.video {
+  padding: 10px 20px;
+}
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 50%; 
   height: 0;
   overflow: hidden;
   max-width: 100%;

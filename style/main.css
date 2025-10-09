@@ -481,35 +481,28 @@ footer ul li a:hover {
     padding: 20px 0;
     display: none;
   }
-
   .navbar.show {
     display: flex;
   }
-
   .menu-icon {
     display: block;
   }
-
   .nav-icons {
     display: none;
   }
-
   .hero h1 {
     font-size: 32px;
   }
-
   .hero p {
     font-size: 16px;
   }
-
   .profile-card {
     width: 90%;
   }
-
   .image-container {
     width: 150px;
     height: 150px;
-    padding: 4px; /* smaller for mobile */
+    padding: 4px;
   }
 
   .image {
